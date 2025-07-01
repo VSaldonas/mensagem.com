@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mensagem Aleatória</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .box {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      font-size: 1.2em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Mensagem do Dia</h1>
+    <p id="mensagem"></p>
+  </div>
+
+  <script>
+    const mensagens = [
+      "Você é mais forte do que imagina!",
+      "Hoje é um ótimo dia para começar algo novo.",
+      "Nunca desista dos seus sonhos.",
+      "Um passo de cada vez leva você longe.",
+      "Confie no processo, tudo vai dar certo.",
+      "Você já venceu por tentar!"
+    ];
+
+    // Escolhe uma mensagem aleatória
+    const mensagem = mensagens[Math.floor(Math.random() * mensagens.length)];
+
+    // Exibe a mensagem
+    document.getElementById("mensagem").textContent = mensagem;
+  </script>
+</body>
+</html>
